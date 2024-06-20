@@ -6,12 +6,17 @@ body {
 }
 
 header {
-    background-color: #d9eed1;
+    background-color: #FCFDFE;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
+
+.header-logo img {
+    max-width: 100px; /* 適切なサイズに変更 */
+    height: auto;
+  }
 
 .header-inner {
     display: flex;
@@ -22,11 +27,17 @@ header {
 
 .header-logo img {
     margin-right: auto;
-    width: 100px; /* 適切なサイズに変更 */
+    width: 100px;
     height: auto;
 }
 
+.title-text{
+    color: rgb(34, 100, 32);
+    left: 8%;
+}
+
 .header-site-menu {
+    
     display: flex;
     align-items: center;
 }
@@ -41,70 +52,107 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: rgb(34, 100, 32);
     font-weight: bold;
+    font-size: 20px; 
 }
 
-main {
-    text-align: center;
-}
 
-.concept {
-    position: relative;
-    color: white;
-}
 
-.background-image {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-    z-index: 1;
-}
-
-.concept-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    z-index: 2;
-}
-.concept-text h1 {
-    font-size: 75px; 
-}
-
-.concept-text p {
-    font-size: 30px; 
-}
-
-.description {
-    background-color: #FFE4C4;
-    padding: 20px;
-}
 
 footer {
-    background-color: #EE693F;
+    background-color: #FCFDFE;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 20px;
 }
 
-.footer-logo img{
-    margin-right: auto;
-    width: 200px; /* 適切なサイズに変更 */
-    height: auto;
-}
-
 .contact {
     text-align: center;
+    color: rgb(34, 100, 32);
 }
 
 .social-media img {
     height: 40px;
     margin-left: 20px;
+}
+
+
+
+
+@media(max-width:800px){
+    .main{
+        padding-top: 50px;
+    }
+    .site-menu ul{
+        display:block;
+        text-align: center;
+        
+    }
+    .site-menu li{
+        margin-top: 20px;
+        z-index: 2;
+    }
+
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #FFFFFF;
+        height: 50px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .header-inner{
+        padding-left: 20px;
+        padding-right: 20px;
+        height:100%;
+        position: relative;
+    }
+
+    .header-logo img {
+        max-width: 65px; /* 適切なサイズに変更 */
+        height: auto;
+        left: 0;
+      }
+      
+    .header-site-menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: #FFFFFF;
+        background-color:rgb(58, 129, 56);
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: none;
+        z-index: 1;
+    }
+
+    .toggle-menu-button{
+        z-index: 2;
+        display: block;
+        width: 44px;
+        height: 34px;
+        background-image: url(../images/common/bar.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+    .header-site-menu.is-show{
+        display: block;
+    }
+
 }
