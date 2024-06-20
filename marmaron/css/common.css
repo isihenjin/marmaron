@@ -154,4 +154,26 @@ footer {
         display: block;
     }
 
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 子要素を中央揃え */
+        text-align: center; /* テキストを中央揃え */
+      }
+      .footer .site-menu {
+        margin-bottom: 50px; /* サイトメニューとSNSアイコンの間に余白を追加 */
+      }
+
+      .footer .social-media {
+        margin-bottom: 20px;
+        margin-right: 20px;
+
+      }
+      
+      .footer .social-media a {
+        margin: 0 10px; /* アイコン間のスペースを確保 */
+
+      }
+      
 }
