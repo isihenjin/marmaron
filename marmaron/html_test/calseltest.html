@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja"> <!-- 言語を日本語に設定 -->
+<head>
+  <meta charset="UTF-8"> <!-- 文字コードを設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- レスポンシブデザインのためのビューポート設定 -->
+  <title>カルーセルの実装</title> <!-- ページのタイトル -->
+  <link rel="stylesheet" href="styles.css"> <!-- CSSファイルをリンク -->
+</head>
+<body>
+  <div class="carousel"> <!-- カルーセルのコンテナ -->
+    <div class="arrow left-arrow">&#9664;</div> <!-- 左矢印 -->
+    <div class="boxes-container"> <!-- ボックスのコンテナ -->
+      <div class="box">
+        <h1>集める</h1>
+        <p>～食べ物循環チャレンジ～</p>
+      </div> <!-- ボックス1 -->
+      <div class="box">2</div> <!-- ボックス2 -->
+      <div class="box">3</div> <!-- ボックス3 -->
+      <div class="box">4</div> <!-- ボックス4 -->
+    </div>
+    <div class="arrow right-arrow">&#9654;</div> <!-- 右矢印 -->
+  </div>
+  <div class="indicators"> <!-- インジケータのコンテナ -->
+    <div class="indicator active"></div> <!-- インジケータ1 -->
+    <div class="indicator"></div> <!-- インジケータ2 -->
+    <div class="indicator"></div> <!-- インジケータ3 -->
+    <div class="indicator"></div> <!-- インジケータ4 -->
+  </div>
+
+  <script src="script.js"></script> <!-- JavaScriptファイルをリンク -->
+</body>
+</html>

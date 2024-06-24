@@ -1,0 +1,55 @@
+@charset "utf-8";
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 2em;
+  user-select: none;
+}
+
+.boxes-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(50% * 4 + 10px * 6); /* ボックスの幅とマージンを考慮したコンテナの幅 */
+}
+
+.box {
+  width: 50%; /* 幅を50%に設定 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin: 0 10px; /* ボックス間の余白 */
+}
+
+.indicators {
+  display: flex;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.indicator.active {
+  background-color: orange;
+}
